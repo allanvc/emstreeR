@@ -141,7 +141,7 @@ set.seed(1984)
 d1 <- matrix(rnorm(n, mean = -2, sd = .5), n/3, 3) # 3d
 d2 <- matrix(rnorm(n, mean = 0, sd = .3), n/3, 3)
 d3 <- matrix(rnorm(n, mean = 3, sd = .4), n/3, 3)
-d <- rbind(d1,d2,d3) # just to show a matrix input
+d <- rbind(d1,d2,d3) # showing a matrix input
   
 ## MST:
 library(emstreeR)
@@ -150,7 +150,7 @@ out <- ComputeMST(d, verbose = FALSE)
 
 ``` r
 ## simple 3D plot:
-plotMST3D(out, xlab = "xaxis", col.pts = "orange", col.segts = "red", main = "Just a MST 3D plot")
+plotMST3D(out, xlab = "xaxis", col.pts = "orange", col.segts = "red", main = "a simple MST 3D plot")
 ```
 
 <img src="man/figures/README-plotMST3D-1.png" width="600" height="400">
