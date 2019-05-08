@@ -1,0 +1,6 @@
+useDynLib(emstreeR)
+importFrom(Rcpp, evalCpp)
+exportPattern("^[[:alpha:]]+")
+importFrom(graphics, plot, segments)
+importFrom(stats, na.omit)
+S3method(plot, MST)

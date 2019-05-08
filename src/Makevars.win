@@ -1,0 +1,28 @@
+CXX_STD = CXX11
+
+PKGOBJECTS = RcppExports.o mlpack_mst.o
+OBJECTS= $(PKGOBJECTS)
+
+PKG_CPPFLAGS=-DBOOST_MATH_PROMOTE_DOUBLE_POLICY=false -I. 
+PKG_LIBS= $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS)
+
+USERDIR	= 	../inst/lib$(R_ARCH)
+STATICLIB =	libRcppMLPACK.a
+USERLIB	= 	$(USERDIR)/$(STATICLIB)
+
+RM = 		rm -f
+
+.PHONY: 	all clean
+
+all: 		userlib $(SHLIB)
+
+clean:
+		${RM} $(OBJECTS) $(SHLIB)
+
+$(USERLIB):	$(OBJECTS)
+
+userlib:	$(STATICLIB)
+		-mkdir -p $(USERDIR)
+		-mv $(STATICLIB) $(USERLIB) 
+
+$(STATICLIB):	$(OBJECTS)
