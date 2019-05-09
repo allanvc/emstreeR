@@ -7,7 +7,7 @@ scale or not your data before computing the MST (Thank's to Moses Obiri who
 pointed this out).
 * updated documentation in ComputeMST.R file
 * updated documentation in emstreeR-package.Rd file
-* deleted honeymoon example from README file, since dsk service for maps are not
+* deleted honeymoon example (extras) from README file, since dsk service for maps are not
 available anymore.
 
 ---
