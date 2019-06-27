@@ -26,10 +26,10 @@ knitr::opts_chunk$set(
 
 ## Overview
 
-**emstreeR** is a package for fast and easily computing Euclidean Minimum Spanning Trees (EMST). It heavily relies on 'RcppMLPACK' and 'Rcpp', working as a wrapper to the fast EMST Dual-Tree Boruvka algorithm (March, Ram, Gray, 2010) implemented in 'mlpack' - the C++ Machine Learning library (Curtin, 2013). Thus, do not have to deal with the R-'Rcpp'-C++ integration. The package also provides functions and an S3 method for readily plotting Minimum Spanning Trees (MST) using either 'base' R, 'scatterplot3d' or 'ggplot2' style.
+**emstreeR** is a package for fast and easily computing Euclidean Minimum Spanning Trees (EMST). It heavily relies on 'RcppMLPACK' and 'Rcpp', working as a wrapper to the fast EMST Dual-Tree Boruvka algorithm (March, Ram, Gray, 2010) implemented in 'mlpack' - the C++ Machine Learning library (Curtin, 2013). The package also provides functions and an S3 method for readily plotting Minimum Spanning Trees (MST) using either 'base' R, 'scatterplot3d' or 'ggplot2' style.
 
 * `computeMST()` computes an Euclidean Minimum Spanning Tree for the input data.
-* `plot.MST()` an S3 method of the generic function plot() for plotting a 2D MST.
+* `plot.MST()` an S3 method for the generic function plot() that produces 2D MST plots.
 * `plotMST3D()` plots a 3D MST using the 'scatterplot3d' style.
 * `stat_MST()` a 'ggplot2' Stat extension for plotting a 2D MST.
 

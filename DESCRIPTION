@@ -1,8 +1,8 @@
 Package: emstreeR
 Type: Package
 Title: Tools for Fast Computing and Plotting Euclidean Minimum Spanning Trees
-Version: 2.2.0
-Date: 2019-06-26
+Version: 2.2.1
+Date: 2019-06-27
 Authors@R: c(
     person(given="Allan", family="Quadros", email = "allanvcq@gmail.com",
     role = c("aut", "cre")),
