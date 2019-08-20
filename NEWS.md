@@ -1,3 +1,13 @@
+# emstreeR 2.2.1 (2019-08-20 - 4th CRAN patch)
+
+## functions
+
+* data_check() now is internal
+* changed .Rbuildignore to ignore README.Rmd, NEWS.md, cran-comments.md and the
+/inst folder
+
+---
+
 # emstreeR 2.2.0 (2019-05-07 - 4th CRAN patch)
 
 ## New data, functions, and features

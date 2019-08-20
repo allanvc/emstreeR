@@ -13,7 +13,11 @@
 #' 
 #' @return a \code{matrix} containing the cleaned data after running the 
 #'     necessary checks.
-#'
+#' 
+#' @export
+#' 
+#' @keywords internal
+#' 
 data_check <- function(x) {
 
   # 1) matrix/data.frame verification
