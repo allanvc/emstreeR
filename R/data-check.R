@@ -9,13 +9,11 @@
 #'     \code{\link[emstreeR]{ComputeMST}} before the computation begins. First, 
 #'     it evaluates the object format. Afterwards, it checks whether the 
 #'     inputed data has at least two columns and tries to coerce all columns 
-#'     into numeric, beyond removing all rows containing \code{NA}'s entries.
+#'     into numeric, beyond removing all rows containing \code{NA} entries.
 #' 
 #' @return a \code{matrix} containing the cleaned data after running the 
 #'     necessary checks.
-#' 
-#' @export
-#' 
+#'     
 #' @keywords internal
 #' 
 data_check <- function(x) {

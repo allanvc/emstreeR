@@ -163,7 +163,7 @@ This package is licensed under the terms of the BSD 3-clause License.
 March, W. B., and Ram, P., and Gray, A. G. (2010). *Fast euclidian
 minimum spanning tree: algorithm analysis, and applications*. 16th ACM
 SIGKDD International Conference on Knowledge Discovery and Data mining,
-July 25-28 2010. Washington, DC, USA. 
+July 25-28 2010. Washington, DC, USA, DOI: 10.17487/RFC3501.
 
 Curtin, R. R. et al. (2013). Mlpack: A scalable C++ machine learning
 library. *Journal of Machine Learning Research*, v. 14, 2013.

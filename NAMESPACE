@@ -1,6 +1,10 @@
 useDynLib(emstreeR)
 importFrom(Rcpp, evalCpp)
-exportPattern("^[[:alpha:]]+")
+#exportPattern("^[[:alpha:]]+") # only when we want all functions that begin letters
 importFrom(graphics, plot, segments)
 importFrom(stats, na.omit)
 S3method(plot, MST)
+export(ComputeMST)
+export(plot.MST)
+export(plotMST3D)
+export(stat_MST)

@@ -2,7 +2,7 @@
 
 ## functions
 
-* data_check() now is internal
+* data_check() and mlpack_mst are now internal
 * changed .Rbuildignore to ignore README.Rmd, NEWS.md, cran-comments.md and the
 /inst folder
 
