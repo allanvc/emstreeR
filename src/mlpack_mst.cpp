@@ -34,6 +34,10 @@ Rcpp::NumericMatrix mlpack_mst(arma::mat& data)
 	mstResults.row(0) = mstResults.row(0) + 1; //start index = 0 in C++
 	mstResults.row(1) = mstResults.row(1) + 1;
 	
+
+	// transpose the matrix back to how it was, for returning to R
+	data = data.t();
+
 	// returning a matrix instead of a list - v2
 	return Rcpp::wrap(mstResults); 
 }
