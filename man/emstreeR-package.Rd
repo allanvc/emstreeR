@@ -5,12 +5,12 @@
 \title{Euclidean Minimum Spanning Tree}
 
 \description{
-  The \pkg{emstreeR} package allows \R users to fast and easily 
+  The \pkg{emstreeR} package enables \R users to fast and easily 
   compute an Euclidean Minimum Spanning Tree from data.
 }
 
 \section{Introduction}{
-  This package relies on RcppMLPACK to provide an R interface to the Dual-Tree 
+  This package relies on \pkg{RcppMLPACK} to provide an \R interface for the Dual-Tree 
   Boruvka algorithm (March, Ram, Gray, 2010) implemented in 'mlpack' - the C++ 
   Machine Learning Library (Curtin et. al., 2013). The Dual-Tree Boruvka is 
   theoretically and emiprically the fastest algorithm for computing an Euclidean

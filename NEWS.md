@@ -1,4 +1,22 @@
-# emstreeR 2.2.1 (2019-08-20 - 4th CRAN patch)
+# emstreeR 2.2.2 (2020-11-28 - Github patch)
+
+## functions
+
+* data_check() and mlpack_mst's doc are now @noRd
+
+## doc
+
+* fixed typos in DESCRIPTION and README
+
+* incorporated the pull request 1
+
+## bug fix
+
+* fixed the documentation (.Rd) file of `computeMST()`. A wrong link was causing the malfunction in the dev version.
+
+---
+
+# emstreeR 2.2.1 (2019-08-20 - Github patch)
 
 ## functions
 

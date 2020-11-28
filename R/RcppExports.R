@@ -9,6 +9,7 @@
 #' @return a \code{matrix} containing each pair of start and end points
 #' on its columns, and the distance between these points in order to 
 #' produce the Minimum Spanning Tree.
+#' @noRd
 #'
 mlpack_mst <- function(data) {
     .Call('_emstreeR_mlpack_mst', PACKAGE = 'emstreeR', data)

@@ -1,22 +1,22 @@
 Package: emstreeR
 Type: Package
 Title: Tools for Fast Computing and Plotting Euclidean Minimum Spanning Trees
-Version: 2.2.1
-Date: 2019-08-20
+Version: 2.2.2
+Date: 2020-11-28
 Authors@R: c(
     person(given="Allan", family="Quadros", email = "allanvcq@gmail.com",
     role = c("aut", "cre")),
     person(given="Andre", family="Cancado", email = "cancado@unb.br", 
     role = c("ctb"))
     )
-Description: Computes Euclidean Minimum Spanning Trees (EMST) using the fast 
-    Dual-Tree Boruvka algorithm (March, Ram, Gray, 2010, 
-    <doi:10.1145/1835804.1835882>) implemented in 'mlpack' - the C++ Machine 
-    Learning library (Curtin et al., 2013). 'emstreeR' heavily relies on 
-    'RcppMLPACK' and 'Rcpp', working as a wrapper to the C++ fast EMST 
-    algorithm. The package also provides functions and an S3 method for 
-    readily plotting Minimum Spanning Trees (MST) using either 'base' R, 
-    'scatterplot3d' or 'ggplot2' style.
+Description: Fast and easily computes an Euclidean Minimum Spanning Tree from data. 
+    This package relies on RcppMLPACK to provide an \R interface to the Dual-Tree Boruvka 
+    algorithm (March, Ram, Gray, 2010, <doi:10.1145/1835804.1835882>) implemented in 
+    'mlpack' - the C++ Machine Learning Library (Curtin et. al., 2013). The Dual-Tree 
+    Boruvka is theoretically and empirically the fastest algorithm for computing an 
+    Euclidean Minimum Spanning Tree (EMST). This package also provides functions and 
+    an S3 method for readily plotting Minimum Spanning Trees (MST) using either the 
+    style of the 'base', 'scatterplot3d', or 'ggplot2' libraries.
 License: BSD_3_clause + file LICENSE
 Encoding: UTF-8
 Imports: Rcpp (>= 0.12.18),
@@ -25,6 +25,6 @@ Imports: Rcpp (>= 0.12.18),
     BBmisc
 Depends: R (>= 3.5.0)
 LinkingTo: Rcpp, RcppMLPACK, RcppArmadillo, BH
-BugReports: https://github.com/allanvc/emstreeR/issues
+BugReports: https://github.com/allanvc/emstreeR/issues/
 SystemRequirements: C++11 compiler.
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1

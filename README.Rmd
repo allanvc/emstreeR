@@ -5,11 +5,11 @@ output: github_document
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, echo = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "README-"
-)
+# knitr::opts_chunk$set(
+#   collapse = TRUE,
+#   comment = "#>",
+#   fig.path = "README-"
+# )
 ```
 
 
@@ -26,7 +26,9 @@ knitr::opts_chunk$set(
 
 ## Overview
 
-**emstreeR** is a package for fast and easily computing Euclidean Minimum Spanning Trees (EMST). It heavily relies on 'RcppMLPACK' and 'Rcpp', working as a wrapper to the fast EMST Dual-Tree Boruvka algorithm (March, Ram, Gray, 2010) implemented in 'mlpack' - the C++ Machine Learning library (Curtin, 2013). The package also provides functions and an S3 method for readily plotting Minimum Spanning Trees (MST) using either 'base' R, 'scatterplot3d' or 'ggplot2' style.
+`emstreeR` enables **R** users to fast and easily compute an Euclidean Minimum Spanning Tree from data. This package relies on RcppMLPACK to provide an R interface for the Dual-Tree Boruvka algorithm (March, Ram, Gray, 2010) implemented in 'mlpack' - the C++ Machine Learning Library (Curtin et. al., 2013). The Dual-Tree Boruvka is theoretically and empirically the fastest algorithm for computing an Euclidean Minimum Spanning Tree (EMST). This package also provides functions and an S3 method for readily plotting Minimum Spanning Trees (MST) using either the style of the 'base', 'scatterplot3d', or 'ggplot2' libraries. 
+
+
 
 * `computeMST()` computes an Euclidean Minimum Spanning Tree for the input data.
 * `plot.MST()` an S3 method for the generic function plot() that produces 2D MST plots.
@@ -82,14 +84,14 @@ library(emstreeR)
 out <- ComputeMST(d, verbose = FALSE)
 ```
 
-```{r base, message = FALSE, eval = FALSE}
+```{r base, message = FALSE, fig.height=4, fig.width=6, eval=FALSE}
 ## simple 2D plot:
 plot(out, col.pts = "red", col.segts = "blue")
 ```
 
-<img src="man/figures/README-plot-1.png" width="650" height="500">
+<img src="man/README-figures/base-1.png" width="650" height="500">
 
-```{r ggplot, message = FALSE, eval = FALSE}
+```{r ggplot, message = FALSE, fig.height=4, fig.width=6, eval=FALSE}
 ## 2D plot with ggplot2:
 library(ggplot2)
 ggplot(data = out, aes(x = x, y = y, from = from, to = to))+ 
@@ -97,9 +99,10 @@ ggplot(data = out, aes(x = x, y = y, from = from, to = to))+
   stat_MST(colour="red")
 ```
 
-<img src="man/figures/README-statMST-1.png" width="600" height="400">
+<img src="man/README-figures/ggplot-1.png" width="600" height="400">
 
-```{r ggplot_curved, message = FALSE, eval = FALSE}
+
+```{r ggplot_curved, message = FALSE, fig.height=4, fig.width=6, eval = FALSE}
 ## 2D curved edges plot with ggplot2:
 library(ggplot2)
 ggplot(data = out, aes(x = x, y = y, from = from, to = to))+ 
@@ -108,12 +111,12 @@ ggplot(data = out, aes(x = x, y = y, from = from, to = to))+
 
 ```
 
-<img src="man/figures/README-statMST_curved-1.png" width="600" height="400">
+<img src="man/README-figures/ggplot_curved-1.png" width="600" height="400">
 
 
 ### 3D Plot
 
-```{r, message = FALSE, eval = FALSE}
+```{r, message = FALSE}
 ## artificial data for 3D plots:
 n = 99
 set.seed(1984)
@@ -127,12 +130,12 @@ library(emstreeR)
 out <- ComputeMST(d, verbose = FALSE)
 ```  
 
-```{r scatterplot3d, message = FALSE, eval = FALSE}
+```{r scatterplot3d, message = FALSE, fig.height=4, fig.width=6, eval=FALSE}
 ## simple 3D plot:
 plotMST3D(out, xlab = "xaxis", col.pts = "orange", col.segts = "red", main = "a simple MST 3D plot")
 ```
 
-<img src="man/figures/README-plotMST3D-1.png" width="600" height="400">
+<img src="man/README-figures/scatterplot3d-1.png" width="600" height="400">
 
 
 ## License

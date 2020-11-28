@@ -4,8 +4,16 @@
 \alias{plotMST3D}
 \title{3D Minimum Spanning Tree Plot}
 \usage{
-plotMST3D(tree, x = 1, y = 2, z = 3, col.pts = "black",
-  col.segts = "black", angle = 40, ...)
+plotMST3D(
+  tree,
+  x = 1,
+  y = 2,
+  z = 3,
+  col.pts = "black",
+  col.segts = "black",
+  angle = 40,
+  ...
+)
 }
 \arguments{
 \item{tree}{a \code{MST} class object returned by the \code{ComputeMST()} 

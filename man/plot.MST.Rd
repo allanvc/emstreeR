@@ -4,8 +4,7 @@
 \alias{plot.MST}
 \title{Plot method for 'MST' objects}
 \usage{
-\method{plot}{MST}(x, ..., V1 = 1, V2 = 2, col.pts = "black",
-  col.segts = "black", lty = 3)
+\method{plot}{MST}(x, ..., V1 = 1, V2 = 2, col.pts = "black", col.segts = "black", lty = 3)
 }
 \arguments{
 \item{x}{a \code{MST} class object returned by the 

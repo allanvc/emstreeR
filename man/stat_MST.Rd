@@ -4,9 +4,17 @@
 \alias{stat_MST}
 \title{Euclidean Minimum Spanning Tree Stat Function}
 \usage{
-stat_MST(mapping = NULL, data = NULL, geom = "segment",
-  position = "identity", na.rm = FALSE, linetype = "dotted",
-  show.legend = NA, inherit.aes = TRUE, ...)
+stat_MST(
+  mapping = NULL,
+  data = NULL,
+  geom = "segment",
+  position = "identity",
+  na.rm = FALSE,
+  linetype = "dotted",
+  show.legend = NA,
+  inherit.aes = TRUE,
+  ...
+)
 }
 \arguments{
 \item{mapping}{The aesthetic mapping, usually constructed with

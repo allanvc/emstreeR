@@ -15,7 +15,7 @@
 #'     necessary checks.
 #'     
 #' @keywords internal
-#' 
+#' @noRd
 data_check <- function(x) {
 
   # 1) matrix/data.frame verification

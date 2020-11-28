@@ -13,7 +13,7 @@
 #'
 #' @details Before the computation, ComputeMST runs some checks and 
 #'     transformations (if needed) on the provided data using the 
-#'     \link{data_check} function. After the computation, it returns the 
+#'     \code{data_check} function. After the computation, it returns the 
 #'     'cleaned' data plus 3 columns: \code{from}, \code{to}, and 
 #'     \code{distance}. Those columns show each pair of start and end points, 
 #'     and the distance between them, forming the Minimum Spanning Tree (MST).
