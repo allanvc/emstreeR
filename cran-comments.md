@@ -1,4 +1,4 @@
-**update v2.2.0**
+**update v2.2.2**
 
 ## Test environments
 * local Ubunutu 18.04, R 3.6.1
@@ -10,9 +10,10 @@
 ## R CMD check results
 0 ERRORs, 0 WARNINGs, 0 NOTES on local WINDOWS 10, win-builder and travis-ci tests.
 
-0 ERRORs, 0 WARNINGs, 1 NOTE on local Ubuntu 18.04:
-        checking installed package size ... NOTE
-        installed size is  8.8Mb
-        sub-directories of 1Mb or more:
-        lib    6.3Mb
-        libs   2.0Mb
+0 ERRORs, 0 WARNINGs, 1 NOTE on local Ubuntu 20.04:
+> checking installed package size ... NOTE
+    installed size is 11.6Mb
+    sub-directories of 1Mb or more:
+      lib    8.8Mb
+      libs   2.7Mb
+

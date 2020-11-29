@@ -19,21 +19,21 @@ mirror](https://cranlogs.r-pkg.org/badges/grand-total/emstreeR)](https://cran.r-
 ## Overview
 
 `emstreeR` enables **R** users to fast and easily compute an Euclidean
-Minimum Spanning Tree from data. This package relies on RcppMLPACK to
-provide an R interface for the Dual-Tree Boruvka algorithm (March, Ram,
-Gray, 2010) implemented in ‘mlpack’ - the C++ Machine Learning Library
-(Curtin et. al., 2013). The Dual-Tree Boruvka is theoretically and
-empirically the fastest algorithm for computing an Euclidean Minimum
-Spanning Tree (EMST). This package also provides functions and an S3
-method for readily plotting Minimum Spanning Trees (MST) using either
-the style of the ‘base’, ‘scatterplot3d’, or ‘ggplot2’ libraries.
+Minimum Spanning Tree (EMST) from data. This package relies on
+{RcppMLPACK} to provide an R interface for the Dual-Tree Boruvka
+algorithm (March, Ram, Gray, 2010) implemented in mlpack, the C++
+Machine Learning Library (Curtin et. al., 2013). The Dual-Tree Boruvka
+is theoretically and empirically the fastest algorithm for computing an
+EMST. This package also provides functions and an S3 method for readily
+plotting Minimum Spanning Trees (MST) using either the style of the
+{base}, {scatterplot3d}, or {ggplot2} libraries.
 
   - `computeMST()` computes an Euclidean Minimum Spanning Tree for the
     input data.
-  - `plot.MST()` an S3 method for the generic function plot() that
+  - `plot.MST()` an S3 method for the generic function `plot()` that
     produces 2D MST plots.
-  - `plotMST3D()` plots a 3D MST using the ‘scatterplot3d’ style.
-  - `stat_MST()` a ‘ggplot2’ Stat extension for plotting a 2D MST.
+  - `plotMST3D()` plots a 3D MST using the {scatterplot3d} style.
+  - `stat_MST()` a {ggplot2} Stat extension for plotting a 2D MST.
 
 ## Installation
 

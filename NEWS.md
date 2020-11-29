@@ -1,4 +1,4 @@
-# emstreeR 2.2.2 (2020-11-28 - Github patch)
+# emstreeR 2.2.2 (2020-11-29 - Github patch/CRAN update)
 
 ## functions
 
