@@ -51,12 +51,6 @@
 \author{
 
   Author & Mantainer: Allan Quadros \email{allanvcq@gmail.com}
-  
-  Contributors:
-  \itemize{
-    \item{Andre Cancado \email{cancado@unb.br}}
-  }
-  
 
 }
 
@@ -77,7 +71,7 @@ library. \emph{Journal of Machine Learning Research}, v. 14, 2013.
   Useful links:
   
   \itemize{
-    \item{ \code{mlpack}: \url{http://www.mlpack.org/}}
+    \item{ \code{mlpack}: \url{https://www.mlpack.org/}}
   }
 
 }
