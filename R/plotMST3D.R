@@ -57,5 +57,5 @@ plotMST3D <- function(tree, x=1, y=2, z=3,
   to <- g$xyz.convert(tree[tree$to, x] , tree[tree$to, y], 
                       tree[tree$to, z])
   
-  segments(from$x, from$y, to$x, to$y, col=col.segts, ...)
+  graphics::segments(from$x, from$y, to$x, to$y, col=col.segts, ...)
 }

@@ -1,26 +1,29 @@
 Package: emstreeR
 Type: Package
 Title: Tools for Fast Computing and Plotting Euclidean Minimum Spanning Trees
-Version: 2.2.2
-Date: 2020-11-28
+Version: 3.0.0
+Date: 2022-03-17
 Authors@R: c(
     person(given="Allan", family="Quadros", email = "allanvcq@gmail.com",
-    role = c("aut", "cre"))
+    role = c("aut", "cre")),
+    person(given="Duncan", family="Garmonsway", email = "nacnudus@gmail.com",
+    role = c("ctb"))
     )
-Description: Fast and easily computes an Euclidean Minimum Spanning Tree (EMST) from data. 
-    algorithm (March, Ram, Gray, 2010, <doi:10.1145/1835804.1835882>) implemented in 
-    'mlpack', the C++ Machine Learning Library (Curtin et. al., 2013). The Dual-Tree 
-    Boruvka is theoretically and empirically the fastest algorithm for computing an EMST. 
-    This package also provides functions and an S3 method for readily plotting Minimum 
-    Spanning Trees (MST) using either the style of the 'base', 'scatterplot3d', or 
-    This package relies on 'mlpack' to provide an R interface to the Dual-Tree Boruvka
-    'ggplot2' libraries.
+Description: Fast and easily computes an Euclidean Minimum Spanning Tree (EMST) from data,
+    relying on 'mlpack' - the R API for the C++ Machine Learning Library (Curtin et. al., 2013).
+    The Dual-Tree Boruvka (March, Ram, Gray, 2010, <doi:10.1145/1835804.1835882>) is theoretically 
+    and empirically the fastest algorithm for computing an EMST. This package also provides 
+    functions and an S3 method for readily plotting Minimum Spanning Trees (MST) using either the 
+    style of the 'base', 'scatterplot3d', or 'ggplot2' libraries.
 License: BSD_3_clause + file LICENSE
 Encoding: UTF-8
 Imports: mlpack,
     scatterplot3d,
     ggplot2,
-    BBmisc
+    BBmisc,
+    graphics,
+    stats
 Depends: R (>= 3.5.0)
 BugReports: https://github.com/allanvc/emstreeR/issues/
 RoxygenNote: 7.1.2
+

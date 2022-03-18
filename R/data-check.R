@@ -53,7 +53,7 @@ data_check <- function(x) {
                      numeric(1))
   
   if(any(na_count == nrow(x))){
-    message("Error after transforming your columns into numeric: one or more 
+    message("Error after transforming columns into numeric: one or more 
             columns end up having only NA's as entries.")
     return(NULL)
   } 
@@ -62,7 +62,7 @@ data_check <- function(x) {
   # 5) removing NA's verification
   if(any(is.na(x))){
     x <- tryCatch({
-      na.omit(x)
+      stats::na.omit(x)
     },
     error=function(e) {
       message("Error: Could not remove your NA's entries.")
@@ -75,3 +75,4 @@ data_check <- function(x) {
   return(x) # returns the transformed data after all checks
   
 }
+

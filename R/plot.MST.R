@@ -51,6 +51,7 @@ plot.MST <- function(x, ..., V1 = 1, V2 = 2, col.pts = "black",
   V2 = V2
   
   plot(x = tree[, V1], y = tree[, V2], col = col.pts, ...)
-  segments(tree[from, V1], tree[from, V2], tree[to, V1], tree[to, V2], 
+  graphics::segments(tree[from, V1], tree[from, V2], tree[to, V1], tree[to, V2], 
            col = col.segts, lty = lty, ...)
 }
+

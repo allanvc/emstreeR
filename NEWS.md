@@ -1,3 +1,12 @@
+# emstreeR 3.0.0 (2020-03-17 - Github patch/CRAN update)
+
+- Migrated from RcppMLPACK to mlpack [thanks to @nacnudus] [#3]
+
+## doc
+
+* updated DESCRIPTION and README
+
+
 # emstreeR 2.2.2 (2020-11-29 - Github patch/CRAN update)
 
 ## functions
