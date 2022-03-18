@@ -26,7 +26,7 @@ output: github_document
 
 ## Overview
 
-`emstreeR` enables **R** users to fast and easily compute an Euclidean Minimum Spanning Tree (EMST) from data. This package relies on {mlpack} to provide an R interface for the Dual-Tree Boruvka algorithm (March, Ram, Gray, 2010) implemented in mlpack, the C++ Machine Learning Library (Curtin et. al., 2013). The Dual-Tree Boruvka is theoretically and empirically the fastest algorithm for computing an EMST. This package also provides functions and an S3 method for readily plotting Minimum Spanning Trees (MST) using either the style of the {base}, {scatterplot3d}, or {ggplot2} libraries.
+`emstreeR` enables **R** users to fast and easily compute an Euclidean Minimum Spanning Tree (EMST) from data. This package relies on the R API for {mlpack} - the C++ Machine Learning Library (Curtin et. al., 2013). {emstreeR} uses the Dual-Tree Boruvka (March, Ram, Gray, 2010, <doi:10.1145/1835804.1835882>), which is theoretically and empirically the fastest algorithm for computing an EMST. This package also provides functions and an S3 method for readily plotting Minimum Spanning Trees (MST) using either the style of the {base}, {scatterplot3d}, or {ggplot2} libraries.
 
 
 
