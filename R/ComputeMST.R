@@ -76,8 +76,9 @@ ComputeMST <- function(x, verbose=TRUE, scale=FALSE) {
   # we just cbind from and to in order to have a data.frame and not a list
 
   rm(data_aux) # cleaning
-  class(x) <- c("MST", "data.frame") # because we wanted a new plot.method for
+  # class(x) <- c("MST", "data.frame") # because we wanted a new plot.method for
   #..objects of class "MST".
+  class(x) <- c("MST", class(x))
 
   return(x)
 }

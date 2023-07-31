@@ -6,13 +6,15 @@
 <!-- # emstreeR <img src="man/figures/logo.png" align="right" /> -->
 <!-- [![Downloads](http://cranlogs.r-pkg.org/badges/emstreeR?color=brightgreen)](http://www.r-pkg.org/pkg/emstreeR) -->
 <!-- one space after links to display badges side by side -->
+<!-- badges: start -->
 
-[![Travis-CI Build
-Status](https://travis-ci.org/allanvc/emstreeR.svg?branch=master)](https://travis-ci.org/allanvc/emstreeR)
-[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/emstreeR)](https://cran.r-project.org/package=emstreeR)
+<!-- [![Travis-CI Build Status](https://travis-ci.org/allanvc/emstreeR.svg?branch=master)](https://travis-ci.org/allanvc/emstreeR)  -->
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/emstreeR)](https://cran.r-project.org/package=emstreeR)
 [![Downloads from the RStudio CRAN
 mirror](https://cranlogs.r-pkg.org/badges/grand-total/emstreeR)](https://cran.r-project.org/package=emstreeR)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg?style=flat-square)](https://opensource.org/licenses/BSD-3-Clause)
+[![R-CMD-check](https://github.com/allanvc/emstreeR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/allanvc/emstreeR/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
 
 ## Overview
 
@@ -20,18 +22,19 @@ mirror](https://cranlogs.r-pkg.org/badges/grand-total/emstreeR)](https://cran.r-
 Minimum Spanning Tree (EMST) from data. This package relies on the R API
 for {mlpack} - the C++ Machine Learning Library (Curtin et. al., 2013).
 {emstreeR} uses the Dual-Tree Boruvka (March, Ram, Gray, 2010,
-<doi:10.1145/1835804.1835882>), which is theoretically and empirically
-the fastest algorithm for computing an EMST. This package also provides
-functions and an S3 method for readily plotting Minimum Spanning Trees
-(MST) using either the style of the {base}, {scatterplot3d}, or
-{ggplot2} libraries.
+<https://doi.org/10.1145/1835804.1835882>), which is theoretically and
+empirically the fastest algorithm for computing an EMST. This package
+also provides functions and an S3 method for readily plotting Minimum
+Spanning Trees (MST) using either the style of the {base},
+{scatterplot3d}, or {ggplot2} libraries; and functions to export the MST
+output to shapefiles.
 
--   `computeMST()` computes an Euclidean Minimum Spanning Tree for the
-    input data.
--   `plot.MST()` an S3 method for the generic function `plot()` that
-    produces 2D MST plots.
--   `plotMST3D()` plots a 3D MST using the {scatterplot3d} style.
--   `stat_MST()` a {ggplot2} Stat extension for plotting a 2D MST.
+- `computeMST()` computes an Euclidean Minimum Spanning Tree for the
+  input data.
+- `plot.MST()` an S3 method for the generic function `plot()` that
+  produces 2D MST plots.
+- `plotMST3D()` plots a 3D MST using the {scatterplot3d} style.
+- `stat_MST()` a {ggplot2} Stat extension for plotting a 2D MST.
 
 ## Installation
 
@@ -58,22 +61,6 @@ d <- as.data.frame(d)
 ## MST:
 library(emstreeR)
 out <- ComputeMST(d)
-```
-
-    ## [0;32m[INFO ] [0mBuilding tree.
-    ## [0;32m[INFO ] [0mCalculating minimum spanning tree.
-    ## [0;32m[INFO ] [0m9 edges found so far.
-    ## [0;32m[INFO ] [0m18 cumulative base cases.
-    ## [0;32m[INFO ] [0m89 cumulative node combinations scored.
-    ## [0;32m[INFO ] [0m12 edges found so far.
-    ## [0;32m[INFO ] [0m31 cumulative base cases.
-    ## [0;32m[INFO ] [0m182 cumulative node combinations scored.
-    ## [0;32m[INFO ] [0m13 edges found so far.
-    ## [0;32m[INFO ] [0m36 cumulative base cases.
-    ## [0;32m[INFO ] [0m237 cumulative node combinations scored.
-    ## [0;32m[INFO ] [0mTotal spanning tree length: 2.49929
-
-``` r
 out
 ```
 
@@ -161,6 +148,40 @@ plotMST3D(out, xlab = "xaxis", col.pts = "orange", col.segts = "red", main = "a 
 
 <img src="man/README-figures/scatterplot3d-1.png" width="600" height="400">
 
+### Exporting the Output to Shapefiles
+
+``` r
+## mock data
+country_coords_txt <- "
+1     3.00000  28.00000       Algeria
+2    54.00000  24.00000           UAE
+3   139.75309  35.68536         Japan
+4    45.00000  25.00000 'Saudi Arabia'
+5     9.00000  34.00000       Tunisia
+6     5.75000  52.50000   Netherlands
+7   103.80000   1.36667     Singapore
+8   124.10000  -8.36667         Korea
+9    -2.69531  54.75844            UK
+10    34.91155  39.05901        Turkey
+11  -113.64258  60.10867        Canada
+12    77.00000  20.00000         India
+13    25.00000  46.00000       Romania
+14   135.00000 -25.00000     Australia
+15    10.00000  62.00000        Norway"
+ 
+d <- read.delim(text = country_coords_txt, header = FALSE,
+                 quote = "'", sep = "",
+                 col.names = c('id', 'lon', 'lat', 'name'))
+                 
+## MST
+library(emstreeR)
+output <- ComputeMST(d[,2:3])
+#plot(output)
+
+export_vertices_to_shapefile(output, file="vertices.shp")
+export_edges_to_shapefile(output, file="edges.shp")
+```
+
 ## License
 
 This package is licensed under the terms of the BSD 3-clause License.
@@ -170,8 +191,7 @@ This package is licensed under the terms of the BSD 3-clause License.
 March, W. B., and Ram, P., and Gray, A. G. (2010). *Fast euclidian
 minimum spanning tree: algorithm analysis, and applications*. 16th ACM
 SIGKDD International Conference on Knowledge Discovery and Data mining,
-July 25-28 2010. Washington, DC, USA,
-[doi:10.1145/1835804.1835882](https://doi.org/10.1145/1835804.1835882).
+July 25-28 2010. Washington, DC, USA.
 
 Curtin, R. R. et al. (2013). Mlpack: A scalable C++ machine learning
 library. *Journal of Machine Learning Research*, v. 14, 2013.

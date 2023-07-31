@@ -4,19 +4,17 @@
 \alias{plot.MST}
 \title{Plot method for 'MST' objects}
 \usage{
-\method{plot}{MST}(x, ..., V1 = 1, V2 = 2, col.pts = "black", col.segts = "black", lty = 3)
+\method{plot}{MST}(x, V1 = 1, V2 = 2, col.pts = "black", col.segts = "black", lty = 3, ...)
 }
 \arguments{
 \item{x}{a \code{MST} class object returned by the 
 \code{\link[emstreeR]{ComputeMST}} function.}
 
-\item{...}{further graphical parameters.}
-
 \item{V1}{the numeric position or the name of the column to be used as the x 
-coordinates of the points in the plot.}
+coordinates.}
 
 \item{V2}{the numeric position or the name of the column to be used as the y 
-coordinates of the points in the plot.}
+coordinates.}
 
 \item{col.pts}{color of the points (vertices/nodes) in the plot.}
 
@@ -26,6 +24,8 @@ coordinates of the points in the plot.}
 \code{1 = "solid"}, \code{2 = "dashed"}, \code{3 = "dotted"}, 
 \code{4 = "dotdash"}, \code{5 = "longdash"}, \code{6 = "twodash"}. The 
 default for \code{'MST'} objects is \code{"dotted"}.}
+
+\item{...}{further graphical parameters.}
 }
 \description{
 Plots a 2D Minimum Spanning Tree (MST) by producing a scatter 

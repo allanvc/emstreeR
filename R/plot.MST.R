@@ -6,9 +6,9 @@
 #' @param x a \code{MST} class object returned by the 
 #'     \code{\link[emstreeR]{ComputeMST}} function.
 #' @param V1 the numeric position or the name of the column to be used as the x 
-#'     coordinates of the points in the plot.
+#'     coordinates.
 #' @param V2 the numeric position or the name of the column to be used as the y 
-#' coordinates of the points in the plot.
+#' coordinates.
 #' @param col.pts color of the points (vertices/nodes) in the plot.
 #' @param col.segts color of the segments (edges) in the plot.
 #' @param lty line type. An integer or name: \code{0 = "blank"}, 
@@ -39,8 +39,10 @@
 #' # using different parameters
 #' plot(out, col.pts = "blue", col.segts = "red", lty = 2)
 #' 
-plot.MST <- function(x, ..., V1 = 1, V2 = 2, col.pts = "black", 
-                     col.segts = "black", lty=3){
+#' @export
+#' 
+plot.MST <- function(x, V1 = 1, V2 = 2, col.pts = "black", 
+                     col.segts = "black", lty=3, ...){
   # user can choose which columns to plot by assigning other values to V1 and V2
   tree <- x
   

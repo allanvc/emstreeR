@@ -1,6 +1,24 @@
+# emstreeR 3.1.0 (2020-07-29 - Github patch/CRAN update)
+
+## doc 
+
+* updated DESCRIPTION and README
+
+## new features
+
+* included support to export to export output to shapefiles (new functions: `export_vertices_to_shapefile()` and `export_edges_to_shapefile()`)
+
+## bug fix
+
+* `plot.MST` was not being exported. Included #'@export in the documentation file
+
+## others
+
+* removed dependency BBMisc
+
 # emstreeR 3.0.0 (2020-03-17 - Github patch/CRAN update)
 
-- Migrated from RcppMLPACK to mlpack [thanks to @nacnudus] [#3]
+* Migrated from RcppMLPACK to mlpack [thanks to @nacnudus] [#3]
 
 ## doc
 
