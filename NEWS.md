@@ -1,4 +1,4 @@
-# emstreeR 3.1.0 (2020-07-29 - Github patch/CRAN update)
+# emstreeR 3.1.0 (2023-11-07 - Github patch/CRAN update)
 
 ## doc 
 
