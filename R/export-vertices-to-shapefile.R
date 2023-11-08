@@ -43,9 +43,9 @@
 #' library(emstreeR)
 #' output <- ComputeMST(d[,2:3])
 #' #plot(output)
-#' 
+#' \dontrun{
 #' export_vertices_to_shapefile(output, file="vertices.shp")
-#' 
+#' }
 #' @export
 #'
 export_vertices_to_shapefile <- function(x, V1 = 1, V2 = 2, file, crs = 4326,

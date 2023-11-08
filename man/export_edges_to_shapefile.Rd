@@ -38,7 +38,7 @@ object of class sf or sfc.}
 \item{...}{further \code{\link[sf]{sf}} parameters.}
 }
 \description{
-Write a shapefile containing the 'MST' vertices
+Write a shapefile containing the 'MST' edges
 }
 \examples{
 
@@ -68,7 +68,7 @@ d <- read.delim(text = country_coords_txt, header = FALSE,
 library(emstreeR)
 output <- ComputeMST(d[,2:3])
 #plot(output)
-
+\dontrun{
 export_edges_to_shapefile(output, file="edges.shp")
-
+}
 }

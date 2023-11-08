@@ -1,6 +1,6 @@
 #' @title Export 'MST' edges to shapefile objects 
 #' 
-#' @description Write a shapefile containing the 'MST' vertices
+#' @description Write a shapefile containing the 'MST' edges
 #'     
 #' @param x a \code{MST} class object returned by the 
 #'     \code{\link[emstreeR]{ComputeMST}} function.
@@ -44,9 +44,9 @@
 #' library(emstreeR)
 #' output <- ComputeMST(d[,2:3])
 #' #plot(output)
-#' 
+#' \dontrun{
 #' export_edges_to_shapefile(output, file="edges.shp")
-#' 
+#' }
 #' @export
 #'
 export_edges_to_shapefile <- function(x, V1 = 1, V2 = 2, file,

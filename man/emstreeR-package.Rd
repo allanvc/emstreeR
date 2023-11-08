@@ -10,11 +10,8 @@
 }
 
 \section{Introduction}{
-  This package relies on \pkg{RcppMLPACK} to provide an \R interface for the Dual-Tree 
-  Boruvka algorithm (March, Ram, Gray, 2010) implemented in 'mlpack' - the C++ 
-  Machine Learning Library (Curtin et. al., 2013). The Dual-Tree Boruvka is 
-  theoretically and emiprically the fastest algorithm for computing an Euclidean
-  Minimum Spanning Tree (EMST). 
+
+This package relies on the R API for {mlpack} - the C++ Machine Learning Library (Curtin et. al., 2013). \pkg{emstreeR} uses the Dual-Tree Boruvka (March, Ram, Gray, 2010, <https://doi.org/10.1145/1835804.1835882>), which is theoretically and empirically the fastest algorithm for computing an EMST. This package also provides functions and an S3 method for readily plotting Minimum Spanning Trees (MST) using either the style of the {base}, {scatterplot3d}, or {ggplot2} libraries; and functions to export the MST output to shapefiles. 
 }
 
 \section{Computing the Minimum Spanning Tree}{
@@ -22,7 +19,7 @@
   a fast wrapper to its \code{C++} homonym from 'mlpack' for computing an 
   Euclidean Minimum Spanning Tree. Compared to functions in other MST related \R 
   packages, \code{\link[emstreeR]{ComputeMST}} is easier to use because you can 
-  pass your data as a \code{numeric matrix} or a \code{data.frame}, which are 
+  pass your data as a numeric \code{matrix} or a \code{data.frame}, which are 
   the most common data input formats in the wild. You do not have to put it into 
   a graph format as you otherwise would in other packages.
 }
@@ -46,6 +43,18 @@
   using the 'ggplot2' style.}
   }
 
+}
+
+\section{Shapefiles}{
+
+  This package also provides functions to export the MST output to shapefiles.
+
+\itemize{
+    \item{\code{\link[emstreeR]{export_edges_to_shapefile}} writes a shapefile containing the `MST` edges.}
+    
+    \item{\code{\link[emstreeR]{export_vertices_to_shapefile}} writes a shapefile containing the `MST` vertices.}
+  
+  }
 }
 
 \author{

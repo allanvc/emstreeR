@@ -23,7 +23,7 @@ output: github_document
   <!-- [![Travis-CI Build Status](https://travis-ci.org/allanvc/emstreeR.svg?branch=master)](https://travis-ci.org/allanvc/emstreeR)  -->
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/emstreeR)](https://cran.r-project.org/package=emstreeR) 
 [![Downloads from the RStudio CRAN mirror](https://cranlogs.r-pkg.org/badges/grand-total/emstreeR)](https://cran.r-project.org/package=emstreeR) 
-[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg?style=flat-square)](https://opensource.org/licenses/BSD-3-Clause) 
+[![License](https://img.shields.io/badge/License-BSD3--Clause-blue?style=flat-square)](https://opensource.org/license/bsd-3-clause/) 
   [![R-CMD-check](https://github.com/allanvc/emstreeR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/allanvc/emstreeR/actions/workflows/R-CMD-check.yaml)
   <!-- badges: end -->
 
@@ -38,6 +38,8 @@ output: github_document
 * `plot.MST()` an S3 method for the generic function `plot()` that produces 2D MST plots.
 * `plotMST3D()` plots a 3D MST using the {scatterplot3d} style.
 * `stat_MST()` a {ggplot2} Stat extension for plotting a 2D MST.
+* `export_vertices_to_shapefile()` writes a shapefile containing the `MST` vertices.
+* `export_edges_to_shapefile()` writes a shapefile containing the `MST` edges.
 
 ## Installation
 
@@ -142,7 +144,7 @@ plotMST3D(out, xlab = "xaxis", col.pts = "orange", col.segts = "red", main = "a 
 <img src="man/README-figures/scatterplot3d-1.png" width="600" height="400">
 
 
-### Exporting the Output to Shapefiles
+### Exporting the Output to GIS Shapefiles
 
 ```{r, message = FALSE, eval=FALSE}
 ## mock data
@@ -176,6 +178,34 @@ export_vertices_to_shapefile(output, file="vertices.shp")
 export_edges_to_shapefile(output, file="edges.shp")
 
 ```
+
+
+Below is an example of how to open the shapefiles using the QGIS software in Ubuntu.
+
+Open file `vertices.shp` or `edges.shp`.
+
+<img src="man/README-figures/qgis1.png" width="750" height="400">
+
+<img src="man/README-figures/qgis2.png" width="750" height="400">
+
+
+Then go to `Menu > Layer > Add Layer > Add Vector Layer`.
+
+<img src="man/README-figures/qgis3.png" width="750" height="400">
+
+
+Select `Source Type` as `File` if it is not selected yet. Then click on the three dots button under `Source` to select the other shapefile, depending on which one you used to open QGIS. In the example below, we select `vertices.shp` as we chose `edges.shp` first.
+
+<img src="man/README-figures/qgis4.png" width="750" height="400">
+
+<img src="man/README-figures/qgis5.png" width="750" height="400">
+
+
+Hit `Add`, then `Close` and __voilà__.
+
+<img src="man/README-figures/qgis6.png" width="750" height="400">
+
+It is then very straightforward to add other layers such map shapefiles or add the generated EMST to existing layers.
 
 ## License
 
