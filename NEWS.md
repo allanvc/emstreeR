@@ -1,8 +1,15 @@
-# emstreeR 3.1.0 (2023-11-07 - Github patch/CRAN update)
+# emstreeR (2023-11-13 - CRAN update)
+
+* carries all the updates after 3.0.0 to CRAN
+* removed emstreeR-package.Rd to avoid CRAN notes
+* incorporates new vignette showing how to export shapefiles
+
+# emstreeR 3.1.0 (2023-11-07 - Github patch)
 
 ## doc 
 
 * updated DESCRIPTION and README
+
 
 ## new features
 
