@@ -1,6 +1,6 @@
-# emstreeR 3.1.3 (2023-12-10 - Github/CRAN update)
+# emstreeR 3.1.3 (2025-12-10 - Github/CRAN update)
 
-* fixed small typos in the DESCRIPTION file
+* fixed small typos in the DESCRIPTION and README files
 
 
 # emstreeR 3.1.2 (2023-11-14 - CRAN update)
