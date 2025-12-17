@@ -1,4 +1,4 @@
-**update v3.1.0**
+**update v3.1.2**
 
 ## Test environments
 * local Ubuntu 20.04, R 4.3.0

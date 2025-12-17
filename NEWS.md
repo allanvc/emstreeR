@@ -1,4 +1,13 @@
-# emstreeR (2023-11-13 - CRAN update)
+# emstreeR 3.1.3 (2023-12-10 - Github/CRAN update)
+
+* fixed small typos in the DESCRIPTION file
+
+
+# emstreeR 3.1.2 (2023-11-14 - CRAN update)
+
+* fixed small typos and broken links
+
+# emstreeR 3.1.0 (2023-11-13 - CRAN update)
 
 * carries all the updates after 3.0.0 to CRAN
 * removed emstreeR-package.Rd to avoid CRAN notes
