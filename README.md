@@ -12,20 +12,20 @@
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/emstreeR)](https://cran.r-project.org/package=emstreeR)
 [![Downloads from the RStudio CRAN
 mirror](https://cranlogs.r-pkg.org/badges/grand-total/emstreeR)](https://cran.r-project.org/package=emstreeR)
-[![License](https://img.shields.io/badge/License-BSD3--Clause-blue?style=flat-square)](https://opensource.org/license/bsd-3-clause/)
+[![License](https://img.shields.io/badge/License-BSD3--Clause-blue?style=flat-square)](https://opensource.org/license/bsd-3-clause)
 [![R-CMD-check](https://github.com/allanvc/emstreeR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/allanvc/emstreeR/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Overview
 
-`emstreeR` enables **R** users to fast and easily compute an Euclidean
-Minimum Spanning Tree (EMST) from data. This package relies on the R API
-for {mlpack} - the C++ Machine Learning Library (Curtin et. al., 2013).
-{emstreeR} uses the Dual-Tree Boruvka (March, Ram, Gray, 2010,
-<https://doi.org/10.1145/1835804.1835882>), which is theoretically and
-empirically the fastest algorithm for computing an EMST. This package
-also provides functions and an S3 method for readily plotting Minimum
-Spanning Trees (MST) using either the style of the {base},
+`emstreeR` enables **R** users to perform fast and easy computation of
+Euclidean Minimum Spanning Trees (EMST) from data. This package relies
+on the R API for {mlpack} - the C++ Machine Learning Library (Curtin et.
+al., 2013). {emstreeR} uses the Dual-Tree Boruvka (March, Ram, Gray,
+2010, <https://doi.org/10.1145/1835804.1835882>), which is theoretically
+and empirically the fastest algorithm for computing an EMST. This
+package also provides functions and an S3 method for readily plotting
+Minimum Spanning Trees (MST) using either the style of the {base},
 {scatterplot3d}, or {ggplot2} libraries; and functions to export the MST
 output to shapefiles.
 
@@ -65,6 +65,22 @@ d <- as.data.frame(d)
 ## MST:
 library(emstreeR)
 out <- ComputeMST(d)
+```
+
+    ## [0;32m[INFO ] [0mBuilding tree.
+    ## [0;32m[INFO ] [0mCalculating minimum spanning tree.
+    ## [0;32m[INFO ] [0m9 edges found so far.
+    ## [0;32m[INFO ] [0m18 cumulative base cases.
+    ## [0;32m[INFO ] [0m89 cumulative node combinations scored.
+    ## [0;32m[INFO ] [0m12 edges found so far.
+    ## [0;32m[INFO ] [0m31 cumulative base cases.
+    ## [0;32m[INFO ] [0m182 cumulative node combinations scored.
+    ## [0;32m[INFO ] [0m13 edges found so far.
+    ## [0;32m[INFO ] [0m36 cumulative base cases.
+    ## [0;32m[INFO ] [0m237 cumulative node combinations scored.
+    ## [0;32m[INFO ] [0mTotal spanning tree length: 2.49929
+
+``` r
 out
 ```
 

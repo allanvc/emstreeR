@@ -33,7 +33,7 @@ object of class sf or sfc.}
 \item{multiple_files}{logical. Should I write each edge to one different file.}
 
 \item{driver}{vector driver to be used in the process. Refer to 
-\url{https://gdal.org/drivers/vector/index.html}}
+\url{https://gdal.org/en/stable/drivers/vector/index.html}}
 
 \item{...}{further \code{\link[sf]{sf}} parameters.}
 }
