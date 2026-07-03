@@ -55,7 +55,7 @@ ComputeMST <- function(x, verbose=TRUE, scale=FALSE) {
     data_aux <- scale(data_aux)
   }
 
-  if (packageVersion(mlpack) < "4.8.0") {
+  if (packageVersion("mlpack") < "4.8.0") {
     from_to_matrix <- mlpack::emst(data_aux, verbose = verbose)$output # always scaled
   } else {
     from_to_matrix <- mlpack::emst(data_aux, verbose = verbose) # always scaled

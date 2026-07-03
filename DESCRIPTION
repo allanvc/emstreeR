@@ -1,4 +1,6 @@
 Package: emstreeR
+Maintainer: x@y.org
+Author: x@y.org
 Type: Package
 Title: Tools for Fast Computing and Visualizing Euclidean Minimum Spanning Trees
 Version: 3.1.3
