@@ -1,3 +1,11 @@
+# emstreeR 3.2.0 (2026-07-27 - Github/CRAN update)
+
+* `ComputeMST()` is now compatible with the changed API of `mlpack::emst()` in
+'mlpack' >= 4.8.0, which returns the output matrix directly instead of a
+one-element list (thanks to @rcurtin, PR #4). Compatibility with older 'mlpack'
+versions is preserved.
+
+
 # emstreeR 3.1.3 (2025-12-10 - Github/CRAN update)
 
 * fixed small typos in the DESCRIPTION and README files; 

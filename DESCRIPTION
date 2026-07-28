@@ -1,8 +1,8 @@
 Package: emstreeR
 Type: Package
 Title: Tools for Fast Computing and Visualizing Euclidean Minimum Spanning Trees
-Version: 3.1.3
-Date: 2025-12-10
+Version: 3.2.0
+Date: 2026-07-27
 Authors@R: c(
     person(given="Allan", family="Quadros", email = "allanvcq@gmail.com",
     role = c("aut", "cre")),
@@ -22,7 +22,8 @@ Imports: mlpack,
     ggplot2,
     graphics,
     stats,
-    sf
+    sf,
+    utils
 Depends: R (>= 3.5.0)
 BugReports: https://github.com/allanvc/emstreeR/issues/
 RoxygenNote: 7.2.3
