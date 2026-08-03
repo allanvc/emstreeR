@@ -12,6 +12,8 @@
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/emstreeR)](https://cran.r-project.org/package=emstreeR)
 [![Downloads from the RStudio CRAN
 mirror](https://cranlogs.r-pkg.org/badges/grand-total/emstreeR)](https://cran.r-project.org/package=emstreeR)
+[![Downloads from the RStudio CRAN
+mirror](https://cranlogs.r-pkg.org/badges/emstreeR)](https://cran.r-project.org/package=emstreeR)
 [![License](https://img.shields.io/badge/License-BSD3--Clause-blue?style=flat-square)](https://opensource.org/license/bsd-3-clause)
 [![R-CMD-check](https://github.com/allanvc/emstreeR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/allanvc/emstreeR/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->

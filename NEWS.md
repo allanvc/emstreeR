@@ -1,3 +1,10 @@
+# emstreeR 3.2.0-1 (2026-08-03 - Github patch)
+
+## doc
+
+* added a monthly downloads badge from the RStudio CRAN mirror to the README.
+
+
 # emstreeR 3.2.0 (2026-07-27 - Github/CRAN update)
 
 * `ComputeMST()` is now compatible with the changed API of `mlpack::emst()` in
